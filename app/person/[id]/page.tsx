@@ -1,3 +1,4 @@
+// app/person/[id]/page.tsx
 import PersonInfo from "../../components/person-info";
 import "../../styles/global.css";
 import styles from "../../styles/person.module.css";
@@ -10,11 +11,10 @@ interface PageProps {
   params: { id: string };
 }
 
-export default async function Person({ params }: PageProps) {
-  const { id } = params;
-
+export default async function Page({ params }) {
+  const { id } = await params;
   return (
-    <div>
+    <div className={styles.container}>
       <PersonInfo id={id} />
     </div>
   );
