@@ -1,4 +1,4 @@
-import { API_URL } from "../person/[id]/page";
+import { API_URL } from "../constants";
 import styles from "../styles/person.module.css";
 
 async function getBillionaires(id: string) {

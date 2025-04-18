@@ -10,8 +10,6 @@ interface PageProps {
   params: { id: string };
 }
 
-export const API_URL = `https://billions-api.nomadcoders.workers.dev/person`;
-
 export default async function Person({ params }: PageProps) {
   const { id } = params;
 
