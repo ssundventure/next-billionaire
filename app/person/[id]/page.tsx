@@ -6,10 +6,14 @@ export const metadata = {
   title: "Detail",
 };
 
+interface PageProps {
+  params: { id: string };
+}
+
 export const API_URL = `https://billions-api.nomadcoders.workers.dev/person`;
 
-export default async function Person(props: { params: { id: string } }) {
-  const { id } = await props.params;
+export default async function Person({ params }: PageProps) {
+  const { id } = params;
 
   return (
     <div>
